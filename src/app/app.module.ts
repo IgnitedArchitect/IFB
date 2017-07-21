@@ -20,9 +20,11 @@ import { SignupPage } from '../pages/signup/signup';
 import { TabsPage } from '../pages/tabs/tabs';
 import { TutorialPage } from '../pages/tutorial/tutorial';
 import { WelcomePage } from '../pages/welcome/welcome';
+import { MessengerPage } from '../pages/messenger/messenger';
 
 import { Api } from '../providers/api';
 import { Items } from '../mocks/providers/items';
+import { ChatHistory } from '../mocks/providers/chatHistory';
 import { Settings } from '../providers/settings';
 import { User } from '../providers/user';
 
@@ -71,7 +73,8 @@ export function provideSettings(storage: Storage) {
     SignupPage,
     TabsPage,
     TutorialPage,
-    WelcomePage
+    WelcomePage,
+    MessengerPage
   ],
   imports: [
     BrowserModule,
@@ -102,11 +105,13 @@ export function provideSettings(storage: Storage) {
     SignupPage,
     TabsPage,
     TutorialPage,
-    WelcomePage
+    WelcomePage,
+    MessengerPage
   ],
   providers: [
     Api,
     Items,
+    ChatHistory,
     User,
     Camera,
     GoogleMaps,
